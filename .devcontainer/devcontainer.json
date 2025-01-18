@@ -1,0 +1,33 @@
+{
+    "name": "Ansible & Terraform Development",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "hashicorp.terraform",
+                "redhat.ansible",
+                "ms-python.python",
+                "ms-azuretools.vscode-docker",
+                "mkhl.direnv"
+            ],
+            "settings": {
+                "[terraform]": {
+                    "editor.formatOnSave": true,
+                    "editor.defaultFormatter": "hashicorp.terraform"
+                },
+                "[yaml]": {
+                    "editor.insertSpaces": true,
+                    "editor.tabSize": 2,
+                    "editor.autoIndent": "keep",
+                    "editor.formatOnSave": true
+                }
+            }
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        }
+    },
+    "postCreateCommand": "ansible --version && terraform --version && echo 'eval \"$(direnv hook bash)\"' >> ~/.bashrc"
+}
