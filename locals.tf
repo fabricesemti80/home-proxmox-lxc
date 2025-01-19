@@ -3,7 +3,7 @@ locals {
     "container0" = {
 
       target_node = "pve-0"
-      hostname    = "lxc-basic-0"
+      hostname    = "docker-swarmhost-0"
       ostemplate  = "nfs-qnap-proxmox:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
       storage     = "cp"
       size        = "16G"
@@ -17,7 +17,7 @@ locals {
     "container1" = {
 
       target_node = "pve-1"
-      hostname    = "lxc-basic-1"
+      hostname    = "docker-swarmhost-1"
       ostemplate  = "nfs-qnap-proxmox:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
       storage     = "local-lvm"
       size        = "16G"
@@ -31,7 +31,7 @@ locals {
     "container2" = {
 
       target_node = "pve-0"
-      hostname    = "lxc-basic-2"
+      hostname    = "docker-swarmhost-2"
       ostemplate  = "nfs-qnap-proxmox:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
       storage     = "cp"
       size        = "16G"
